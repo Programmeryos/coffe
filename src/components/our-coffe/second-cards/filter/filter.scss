@@ -1,0 +1,47 @@
+.filter{
+    display: flex;
+    align-items: center;
+    &__text{
+        margin-right: 35px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+        cursor: pointer;
+        transition: all 0.5s;
+        &:hover{
+            box-shadow: 1px 1px 5px grey;
+        }
+    }
+    &-btn{
+        margin-right: 5px;
+        width: 75px;
+        height: 30px;
+        background: #FFFFFF;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border: none;
+        cursor: pointer;
+        transition:  all 0.5s;
+        &:first-child{
+            border-radius: 4px 0px 0px 4px;
+        }
+        &:last-child{
+            margin-right: 0;
+            border-radius: 0px 4px 4px 0px;
+        }
+        &:hover{
+            background: grey;
+            color: white
+        }
+    }
+    &__btns{
+        display: flex;
+    }
+
+    .active{
+        background: #000000;
+        color: white;
+        transition: 0.7s;
+    }
+}

@@ -1,0 +1,28 @@
+.about-our-goods{
+    .divider{
+        border: 1px solid #000000;
+    }
+    .big-divider{
+        margin: 0 auto;  
+        margin-top: 60px;
+    }
+    &__wrapper{
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: 272px 346px;
+        grid-auto-rows: 355px;
+        justify-content: center;
+        column-gap: 90px;
+        .grains{
+            margin-top: 20px;
+        }
+    }
+    &__descr{
+        margin-top: 25px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+    }
+}

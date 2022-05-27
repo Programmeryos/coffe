@@ -1,0 +1,50 @@
+.our-best{
+    min-height: 500px;
+    padding: 80px 0 110px 0;
+    background: url(our-best-bg.png) center (center/cover) no-repeat;
+    &__cards{
+        display: flex;
+        justify-content: center;
+    }
+    &__card{
+        position: relative;
+        padding: 21px;
+        margin-top: 40px;
+        display: block;
+        width: 220px;
+        height: 240px;
+        background: rgba(255, 255, 255, 0.79);
+        border-radius: 10px;
+        &:nth-child(2) {
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+        &-img{
+            position: absolute;
+            top: 22px;
+            left: 34px;
+            img {
+                object-fit: fill;
+            }
+        }
+        &-title{
+            margin-top: 145px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            color: #000000;
+        }
+        &-price{
+            margin-top: 10px;
+            display: flex;
+            justify-content: right;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            color: #000000;
+            
+        }
+    }
+}
