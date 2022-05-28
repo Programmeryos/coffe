@@ -14,17 +14,10 @@ class CardsList extends Component{
         let count = 0;
 
         elements.forEach((item, i) => {
-            if (e.target === item) {
-                count = i;
+            if(e.currentTarget === item) {
+                count = i
             }
         })
-
-        //Знизу хитро-мудра схема 
-
-        if (count > 5) {
-            count -= 6;
-        }
-
         this.props.setInfoData(count);
 
     }
@@ -44,7 +37,7 @@ class CardsList extends Component{
         })
     
         return (
-            <div className="second-cards__list" onClick={this.openInfo}>
+            <div className="second-cards__list">
                 {elements}       
             </div>
         )
