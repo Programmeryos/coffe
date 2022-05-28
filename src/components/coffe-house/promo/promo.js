@@ -1,6 +1,6 @@
 import './promo.scss';
 
-function Promo() {
+function Promo(props) {
     return (
         <div className="promo">
             <div className="container">
@@ -13,7 +13,7 @@ function Promo() {
                     </div>
                     <div className="promo__descr">We makes every day full of energy and taste</div>
                     <div className="promo__descr promo__descr-2">Want to try our beans?</div>
-                    <button className="promo__btn">More</button>
+                    <button className="promo__btn" onClick={props.goToBeans}>More</button>
                 </div>
             </div>
         </div>

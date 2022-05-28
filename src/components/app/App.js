@@ -50,13 +50,19 @@ class App extends Component {
         this.setState({infoData: this.state.data[e]})
     }
 
+    goToBeans = () => {
+        document.querySelector('.second-page').style.display = 'block';
+        document.querySelector('.first-page').style.display = 'none';
+    }
+
     render() {
 
         return (
             <div className="app">
                 <Header/>
                 <div className="first-page">
-                    <Promo/>
+                    <Promo 
+                        goToBeans={this.goToBeans}/>
                     <AboutUs/>
                     <OurBest  data={this.state.bestGoods}/>
                 </div>
