@@ -24,7 +24,7 @@ class SecondCards extends Component {
         }
 
         return items.filter(item => {
-            return item.title.indexOf(term) > -1;
+            return item.title.toLowerCase().indexOf(term) > -1;
         })
     }
 

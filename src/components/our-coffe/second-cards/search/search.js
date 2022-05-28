@@ -10,7 +10,7 @@ class Search extends Component {
     }
 
     onUpdateSearch = (e) => {
-        const searchData = e.target.value;
+        const searchData = e.target.value.toLowerCase();
         this.setState({term: searchData});
         this.props.onUpdateSearch(searchData);
     }
