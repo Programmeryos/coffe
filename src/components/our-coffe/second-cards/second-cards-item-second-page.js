@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import './second-cards.scss';
 
-class CardsItem extends Component {
+class CardsItemSecond extends Component {
     constructor (props) {
         super(props);
         this.state = {
@@ -13,7 +13,7 @@ class CardsItem extends Component {
     render() {
         const {src, alt, title, country, price} = this.props;
         return(
-            <div className="second-cards__list__item" onClick={this.props.openInfo}>
+            <div className="second-cards__list__item1" onClick={this.props.openInfo}>
                 <div className="second-cards__list__item-img">
                     <img src={src} alt={alt} />
                 </div>
@@ -31,4 +31,4 @@ class CardsItem extends Component {
     }
 }
 
-export default CardsItem;
+export default CardsItemSecond;

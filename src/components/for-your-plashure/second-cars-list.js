@@ -1,7 +1,7 @@
 import { Component } from "react";
-import CardsItemSecond from "./second-cards-item-second-page";
+import CardsItemThird from "./second-cards-item-third-page";
 
-class CardsList extends Component{
+class CardsListThird extends Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -11,7 +11,7 @@ class CardsList extends Component{
     
     openInfo = (e) => {
         
-        const elements = document.querySelectorAll('.second-cards__list__item1');
+        const elements = document.querySelectorAll('.second-cards__list__item');
 
         elements.forEach((item, i)=> {
             if (e.currentTarget === item) {
@@ -29,7 +29,7 @@ class CardsList extends Component{
             const {id, ...itemProps} = item;
     
             return (
-                <CardsItemSecond
+                <CardsItemThird
                     key={id}
                     {...itemProps}
                     openInfo={this.openInfo}/>
@@ -44,4 +44,4 @@ class CardsList extends Component{
     }
 }
 
-export default CardsList;
+export default CardsListThird;

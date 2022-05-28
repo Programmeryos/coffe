@@ -14,7 +14,7 @@ import SecondCards from '../our-coffe/second-cards/second-cards';
 
 import ThirdPromo from '../for-your-plashure/for-your-plashuure__promo/for-your-plashure__promo';
 import AboutGoods from '../for-your-plashure/about-our-goods/about-our-goods';
-import CardsList from '../our-coffe/second-cards/second-cars-list';
+import CardsListThird from '../for-your-plashure/second-cars-list';
 
 import AboutIt from '../info-page/about-it/about-it';
 
@@ -24,17 +24,17 @@ class App extends Component {
         super(props);
         this.state = {
             data: [
-                {src: "coffe.png", alt: "coffe", title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "6.99$", id: 1, descr:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, facere repellendus aliquam adipisci, quae recusandae esse officiis commodi dolorem neque harum iure ex, nulla explicabo consequuntur exercitationem modi quisquam labore!'},
-                {src: "coffe.png", alt: "coffe", title: "AROMISTICO Coffee 1 kg", country: "Kenya", price: "6.99$", id: 2, descr:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, facere repellendus aliquam adipisci, quae recusandae esse officiis commodi dolorem neque harum iure ex, nulla explicabo consequuntur exercitationem modi quisquam labore!'},
-                {src: "coffe.png", alt: "coffe", title: "AROMISTICO Coffee 1 kg", country: "Columbia", price: "6.99$", id: 3, descr:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, facere repellendus aliquam adipisci, quae recusandae esse officiis commodi dolorem neque harum iure ex, nulla explicabo consequuntur exercitationem modi quisquam labore!'},
-                {src: "coffe.png", alt: "coffe", title: "LATE Coffee 1 kg", country: "Brazil", price: "6.99$", id: 4, descr:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, facere repellendus aliquam adipisci, quae recusandae esse officiis commodi dolorem neque harum iure ex, nulla explicabo consequuntur exercitationem modi quisquam labore!'},
-                {src: "coffe.png", alt: "coffe", title: "CAPUCHINO Coffee 1 kg", country: "Brazil", price: "6.99$", id: 5, descr:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, facere repellendus aliquam adipisci, quae recusandae esse officiis commodi dolorem neque harum iure ex, nulla explicabo consequuntur exercitationem modi quisquam labore!'},
-                {src: "coffe.png", alt: "coffe", title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "6.99$", id: 6, descr:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, facere repellendus aliquam adipisci, quae recusandae esse officiis commodi dolorem neque harum iure ex, nulla explicabo consequuntur exercitationem modi quisquam labore!'}
+                {src: "coffe.png", alt: "coffe", title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "6.99$", id: 0, descr:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, facere repellendus aliquam adipisci, quae recusandae esse officiis commodi dolorem neque harum iure ex, nulla explicabo consequuntur exercitationem modi quisquam labore!', class: "second-cards__list__item"},
+                {src: "coffe.png", alt: "coffe", title: "AROMISTICO Coffee 1 kg", country: "Kenya", price: "6.99$", id: 1, descr:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, facere repellendus aliquam adipisci, quae recusandae esse officiis commodi dolorem neque harum iure ex, nulla explicabo consequuntur exercitationem modi quisquam labore!', class: "second-cards__list__item"},
+                {src: "coffe.png", alt: "coffe", title: "AROMISTICO Coffee 1 kg", country: "Columbia", price: "6.99$", id: 2, descr:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, facere repellendus aliquam adipisci, quae recusandae esse officiis commodi dolorem neque harum iure ex, nulla explicabo consequuntur exercitationem modi quisquam labore!', class: "second-cards__list__item"},
+                {src: "coffe.png", alt: "coffe", title: "LATE Coffee 1 kg", country: "Brazil", price: "6.99$", id: 3, descr:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, facere repellendus aliquam adipisci, quae recusandae esse officiis commodi dolorem neque harum iure ex, nulla explicabo consequuntur exercitationem modi quisquam labore!', class: "second-cards__list__item"},
+                {src: "coffe.png", alt: "coffe", title: "CAPUCHINO Coffee 1 kg", country: "Brazil", price: "6.99$", id: 4, descr:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, facere repellendus aliquam adipisci, quae recusandae esse officiis commodi dolorem neque harum iure ex, nulla explicabo consequuntur exercitationem modi quisquam labore!', class: "second-cards__list__item"},
+                {src: "coffe.png", alt: "coffe", title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "6.99$", id: 5, descr:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, facere repellendus aliquam adipisci, quae recusandae esse officiis commodi dolorem neque harum iure ex, nulla explicabo consequuntur exercitationem modi quisquam labore!', class: "second-cards__list__item"}
             ],
             bestGoods: [
-                {src: 'card.png', alt:'coffe', title: 'Solimo Coffee Beans 2 kg', price: '10.73$', id: 7},
-                {src: 'card2.png', alt:'coffe', title: 'Presto Coffee Beans 1 kg', price: '15.99$', id: 8},
-                {src: 'coffe.png', alt:'coffe', title: 'AROMISTICO Coffee 1 kg', price: '6.99$', id: 9},
+                {src: 'card.png', alt:'coffe', title: 'Solimo Coffee Beans 2 kg', price: '10.73$', id: 6},
+                {src: 'card2.png', alt:'coffe', title: 'Presto Coffee Beans 1 kg', price: '15.99$', id: 7},
+                {src: 'coffe.png', alt:'coffe', title: 'AROMISTICO Coffee 1 kg', price: '6.99$', id: 8},
             ],
             infoData: []
         }
@@ -44,8 +44,9 @@ class App extends Component {
         document.querySelector('.second-page').style.display = 'none';
         document.querySelector('.first-page').style.display = 'none';
         document.querySelector('.third-page').style.display = 'none';
-        document.querySelector('.info-page').style.display = 'block';    
-        this.setState({infoData: this.state.data[e]})
+        document.querySelector('.info-page').style.display = 'block';  
+        
+        this.setState({infoData: e})
     }
 
     goToBeans = () => {
@@ -76,7 +77,7 @@ class App extends Component {
                 <div className="third-page">
                     <ThirdPromo/>
                     <AboutGoods/>
-                    <CardsList setInfoData={this.setInfoData}
+                    <CardsListThird setInfoData={this.setInfoData}
                         data={this.state.data}/>
                 </div>
 
