@@ -8,6 +8,10 @@ class Header extends Component{
 
         }
     }
+
+    componentDidMount() {
+        console.log(this.props)
+    }
     
     showContent = (e) => {
         const elements = document.querySelectorAll('.header__list-item');
@@ -44,8 +48,8 @@ class Header extends Component{
                         <nav>
                             <ul className="header__list">
                                 <img src="Logo.svg" alt="logo" className='header__logo'/>
-                                <li className="header__list-item" onClick={this.showContent}>Coffee house</li>
-                                <li className="header__list-item" onClick={this.showContent}>Our coffee</li>
+                                <li className="header__list-item" onClick={() => this.props.onChangePage(1)}>Coffee house</li>
+                                <li className="header__list-item" onClick={() => this.props.onChangePage(2)}>Our coffee</li>
                                 <li className="header__list-item" onClick={this.showContent}>For your pleasure</li>
                             </ul>
                         </nav>

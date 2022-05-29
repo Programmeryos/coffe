@@ -1,7 +1,18 @@
 import './about-us.scss';
 
+import Promo from '../../coffe-house/promo/promo';
+import OurBest from '../../coffe-house/our-best/our-best';
+
+const bestGoods =[
+                {src: 'card.png', alt:'coffe', title: 'Solimo Coffee Beans 2 kg', price: '10.73$', id: 6},
+                {src: 'card2.png', alt:'coffe', title: 'Presto Coffee Beans 1 kg', price: '15.99$', id: 7},
+                {src: 'coffe.png', alt:'coffe', title: 'AROMISTICO Coffee 1 kg', price: '6.99$', id: 8},
+            ]
+
 function AboutUs() {
     return (
+                         <div className="first-page">
+        <Promo />
         <div className='about-us'>
             <div className="container">
                 <div className="title">About Us</div>
@@ -22,6 +33,8 @@ function AboutUs() {
                 </div>
             </div>
         </div>
+        <OurBest data={bestGoods}/>
+    </div>
     )
 }
 

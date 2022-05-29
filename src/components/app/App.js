@@ -36,7 +36,8 @@ class App extends Component {
                 {src: 'card2.png', alt:'coffe', title: 'Presto Coffee Beans 1 kg', price: '15.99$', id: 7},
                 {src: 'coffe.png', alt:'coffe', title: 'AROMISTICO Coffee 1 kg', price: '6.99$', id: 8},
             ],
-            infoData: []
+            infoData: [],
+            activePage: 1
         }
     }
 
@@ -54,37 +55,52 @@ class App extends Component {
         document.querySelector('.first-page').style.display = 'none';
     }
 
+    changePage = (pageNumber) => {
+        console.log('pageNumber', pageNumber)
+        this.setState({
+            activePage: pageNumber
+        })
+    }
+
     render() {
+
+        const {activePage} = this.state
 
         return (
             <div className="app">
-                <Header/>
-                <div className="first-page">
-                    <Promo 
-                        goToBeans={this.goToBeans}/>
-                    <AboutUs/>
-                    <OurBest  data={this.state.bestGoods}/>
-                </div>
+                <Header onChangePage={this.changePage}/>
 
-                <div className="second-page">
-                    <SecondPromo/>
-                    <Beans/>
-                    <SecondCards
-                        data={this.state.data}
-                        setInfoData={this.setInfoData} />
-                </div>
+                {activePage ===1 && <AboutUs/>}
 
-                <div className="third-page">
-                    <ThirdPromo/>
-                    <AboutGoods/>
-                    <CardsListThird setInfoData={this.setInfoData}
-                        data={this.state.data}/>
-                </div>
+              {activePage ===2 && ( 
+                    <div className="second-page">
+                        <SecondPromo/>
+                        <Beans/>
+                        <SecondCards
+                            data={this.state.data}
+                            setInfoData={ () => this.changePage(2)} />
+                    </div>
 
-                <div className="info-page">
-                    <SecondPromo/>
-                    <AboutIt infoData={this.state.infoData}/>
-                </div>
+              )}
+
+                {activePage ===3 && ( 
+
+                    <div className="third-page">
+                        <ThirdPromo/>
+                        <AboutGoods/>
+                        <CardsListThird setInfoData={this.setInfoData}
+                            data={this.state.data}/>
+                    </div>
+                )}
+
+               
+                {activePage ===4 && ( 
+                    <div className="info-page">
+                        <SecondPromo/>
+                        <AboutIt infoData={this.state.infoData}/>
+                    </div>
+                )}
+             
                 <Footer/>
             </div>
         )
